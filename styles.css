@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  --clr-very-dark-blue: hsl(234, 12%, 34%);
+  --clr-grayish-blue: hsl(229, 6%, 66%);
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--clr-grayish-blue);
+  line-height: 1.5;
+  margin-bottom: 80px;
+}
+
+main {
+  width: 100%;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--clr-very-dark-blue);
+  margin-top: 36px;
+}
+
+header h2 {
+  font-size: 24px;
+  color: var(--clr-very-dark-blue);
+  margin-bottom: 15px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  row-gap: 25px;
+  margin: 52px 35px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: -3px 8px 14px rgba(0, 0, 0, 0.05),
+    3px 8px 14px rgba(0, 0, 0, 0.05), 0 8px 14px rgba(0, 0, 0, 0.05);
+}
+
+.box img {
+  width: 55px;
+  height: auto;
+  align-self: flex-end;
+}
+
+.box p {
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+.box h3 {
+  color: var(--clr-very-dark-blue);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.grid-item1 {
+  border-top: 4px solid var(--clr-cyan);
+}
+
+.grid-item2 {
+  border-top: 4px solid var(--clr-red);
+}
+
+.grid-item3 {
+  border-top: 4px solid var(--clr-orange);
+}
+
+.grid-item4 {
+  border-top: 4px solid var(--clr-blue);
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  header h2 {
+    font-size: 26px;
+  }
+
+  .main-paragraph {
+    padding: 0 50px;
+  }
+
+  .grid-box {
+    column-gap: 25px;
+    margin: 0 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  header h2 {
+    font-size: 32px;
+  }
+
+  .main-paragraph {
+    padding: 0 250px;
+    margin-bottom: 30px;
+  }
+
+  .grid-box {
+    max-width: 880px;
+    margin: 0 auto;
+    column-gap: 25px;
+  }
+
+  .grid-item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / -4;
+    align-self: center;
+  }
+
+  .grid-item3 {
+    grid-column: -3 / -2;
+  }
+
+  .grid-item4 {
+    grid-row: -1 / -4;
+    grid-column: 3 / 4;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 15px;
+  }
+  header {
+    margin-top: 28px;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+
+  header h2 {
+    font-size: 36px;
+  }
+
+  .main-paragraph {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .grid-box {
+    max-width: 1100px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+
+  .box img {
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  .grid-box .box p {
+    margin-bottom: 40px;
+  }
+
+  .grid-item1 p {
+    margin-right: 10px;
+  }
+
+  .grid-item4 p {
+    margin-right: 15px;
+  }
+}
